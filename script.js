@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const exists = await checkHeroExists(heroName);
 
         if (!exists) {
-            message.textContent = "Superhero not found! Please enter a valid hero name.";
+            message.textContent = `${heroName} not found! Please enter a valid hero name.`;
             return;
         }
 
