@@ -6,7 +6,6 @@ const API_URL = `https://superheroapi.com/api.php/${API_KEY}/search/`;
 
 document.addEventListener("DOMContentLoaded", function () {
     const heroInput = document.getElementById("heroName");
-    const addHeroButton = document.getElementById("addHeroButton");
     const message = document.getElementById("message");
 
     /**
@@ -81,9 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
             heroList.appendChild(li);
         });
     }
-
-    // Event listener for the button click
-    addHeroButton.addEventListener("click", addHero);
 
     // Event listener for pressing Enter inside the input field
     heroInput.addEventListener("keypress", function (event) {
