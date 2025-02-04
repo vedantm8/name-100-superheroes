@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // If the superhero exists, add them to the list
         heroesArray.push(heroName);
         heroInput.value = "";
-        message.textContent = "Superhero added successfully!";
+        message.textContent = `${heroName} added successfully!`;
 
         updateHeroList();
     }
