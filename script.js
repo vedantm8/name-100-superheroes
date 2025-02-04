@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     async function addHero() {
         const heroName = heroInput.value.trim();
+        const heroNameLower = heroName.toLowerCase(); // Normalize to lowercase
         message.textContent = ""; // Clear previous messages
 
         if (heroName === "") {
@@ -44,6 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (heroesArray.length >= 100) {
             message.textContent = "You have reached the limit of 100 superheroes!";
+            return;
+        }
+        if (heroesArray.some(hero => hero.toLowerCase() === heroNameLower)) {
+            message.textContent = `${heroName} has already been added!`;
             return;
         }
 
