@@ -3,7 +3,10 @@ name: Deploy to GitHub Pages (Test Branch)
 on:
   push:
     branches:
-      - test  # Runs when changes are pushed to the 'test' branch
+      - test  
+
+permissions:
+  contents: write  
 
 jobs:
   deploy:
@@ -11,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false 
 
       - name: Inject API Key
         run: echo "const API_KEY = \"${{ secrets.SUPERHERO_API_KEY }}\";" > config.js
@@ -20,3 +25,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .
+          token: ${{ secrets.GITHUB_TOKEN }} 
