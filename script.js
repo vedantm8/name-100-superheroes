@@ -1,8 +1,17 @@
 let heroesArray = []; // Store valid hero names
 
-// Store API key in a variable
-const API_KEY = "YOUR_ACCESS_TOKEN"; 
-const API_URL = `https://superheroapi.com/api.php/${API_KEY}/search/`;
+/**
+ * Retrieves the API Key
+ * @param {String} heroName Name of the hero user has inputted
+ * @returns API Key
+ */
+async function getAPIKey(heroName) {
+    // Get API Key from config.js file 
+    const response = await fetch("config.js")
+    const text = await response.text();
+    // Extract the Key 
+    return text.match(/API_KEY\s*=\s*"(.+)"/)[1];
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const heroInput = document.getElementById("heroName");
@@ -14,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
      * @returns Boolean - True if hero exists
      */
     async function checkHeroExists(heroName) {
+        const API_KEY = await getAPIKey(heroName) 
+        const API_URL = `https://superheroapi.com/api.php/${API_KEY}/search/`;
         try {
             const response = await fetch(`${API_URL}${heroName}`);
             const data = await response.json();
