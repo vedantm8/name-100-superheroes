@@ -12,6 +12,12 @@ Name 100 Superheroes is a simple web-based challenge where users attempt to name
 
 ## Getting Started <a name = "getting_started"></a>
 
+### CodePen View:
+
+You can view the site here on CodePen: 
+
+* https://codepen.io/vedantm8/pen/ByaNdva
+
 ### Prerequisites
 
 To run this project, you will need the following: 
@@ -35,7 +41,6 @@ cd name-100-superheroes
 
     * Go to [Superhero API](https://superheroapi.com)
     * Login to GitHub to get the API Key
-    * Open `script.js` and replace `YOUR_ACCESS_TOKEN` with your actual API key
 
 3. Run the project 
     * Open `index.html` in your web browser
@@ -43,6 +48,7 @@ cd name-100-superheroes
 
 ## Usage <a name = "usage"></a>
 
+* Enter API Key in input field. It'll state if API Key is valid or not.
 * Enter a superhero name in the input field.
 * Press Enter or click the "Add Hero" button.
 * If the superhero exists in the database, they are added to the list.
