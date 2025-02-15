@@ -14,10 +14,10 @@ Name 100 Superheroes is a simple web-based challenge where users attempt to name
 
 ### CodePen View:
 
-You can view the site here on CodePen or through GitHub Pages: 
+You can view the site here on GitHub Pages or through CodePen: 
 
-* https://codepen.io/vedantm8/pen/ByaNdva
 * https://vedantm8.github.io/name-100-superheroes/
+* https://codepen.io/vedantm8/pen/ByaNdva
 
 ### Prerequisites
 
