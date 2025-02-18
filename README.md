@@ -12,7 +12,7 @@ Name 100 Superheroes is a simple web-based challenge where users attempt to name
 
 ## Getting Started <a name = "getting_started"></a>
 
-### CodePen View:
+### Online View:
 
 You can view the site here on GitHub Pages or through CodePen: 
 
