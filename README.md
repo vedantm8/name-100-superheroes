@@ -51,7 +51,7 @@ cd name-100-superheroes
 
 * Enter API Key in input field. It'll state if API Key is valid or not.
 * Enter a superhero name in the input field.
-* Press Enter or click the "Add Hero" button.
+* Press Enter.
 * If the superhero exists in the database, they are added to the list.
 * If the superhero does not exist, an error message is displayed.
 * Users can add up to 100 superheroes.
